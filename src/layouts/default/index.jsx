@@ -26,8 +26,8 @@ export default function DefaultLayout({ children }) {
         </nav>
       </header>
       <main className='container p-8'>{children}</main>
-      <footer className='bg-stone-100 text-sm font-medium uppercase text-stone-400'>
-        <div>Footer</div>
+      <footer className='mx-auto text-xs font-medium uppercase text-stone-400'>
+        <div>standard dummy text ever since the 1500s @ copyright</div>
       </footer>
     </>
   )
