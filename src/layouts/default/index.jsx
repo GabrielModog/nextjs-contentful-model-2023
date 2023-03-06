@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Layout({ children }) {
+export default function DefaultLayout({ children }) {
   return (
     <>
       <header className='bg-stone-100 p-8'>

@@ -1,15 +1,11 @@
-import { PostCard } from '@/components/posts'
+import { PostCard, PostList } from '@/components/posts'
 import { client } from '@/lib/contentful/client'
 
 const Posts = ({ posts }) => {
   return (
     <section className='section'>
       <div className='container'>
-        <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-10'>
-          {posts.map((post, i) => (
-            <PostCard key={post.fields.slug} post={post} />
-          ))}
-        </ul>
+        <PostList posts={posts} />
       </div>
     </section>
   )

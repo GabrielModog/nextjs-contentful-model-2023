@@ -1,4 +1,4 @@
-export default function Skeleton() {
+export default function PostSkeleton() {
   return (
     <div className='animate-pulse'>
       <div className='bg-gray-200 py-48 rounded-md' />

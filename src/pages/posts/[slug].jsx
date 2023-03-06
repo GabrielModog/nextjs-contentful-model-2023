@@ -1,7 +1,8 @@
-import { PostBody, PostHeader } from '@/components/posts'
-import Skeleton from '@/components/skeleton'
-import { client } from '@/lib/contentful/client'
 import { useRouter } from 'next/router'
+
+import { PostDetail } from '@/components/posts'
+import PostSkeleton from '@/components/posts/post-detail/post-skeleton'
+import { client } from '@/lib/contentful/client'
 
 const Posts = ({ post, preview }) => {
   const router = useRouter()
@@ -10,14 +11,7 @@ const Posts = ({ post, preview }) => {
       {preview && <PreviewAlert />}
       <div className='container'>
         <article className='prose mx-auto'>
-          {router.isFallback ? (
-            <Skeleton />
-          ) : (
-            <>
-              <PostHeader post={post} />
-              <PostBody post={post} />
-            </>
-          )}
+          {router.isFallback ? <PostSkeleton /> : <PostDetail post={post} />}
         </article>
       </div>
     </section>
